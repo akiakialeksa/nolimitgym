@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --tamno-plava: #0d0f18;
+    --crvena: #da0017;
+    --bela: #ffffff;
+}
+
+.navbar {
+    background-color: var(--tamno-plava);
+}
+
+.container{
+    max-width: 1167px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    margin-right: -10px;
+}
+
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: Medium;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--crvena);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.Hero{
+    background-image: url(Assets/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-naslov{
+    color: var(--bela);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 68px;
+    top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-cta{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    padding: 56px 100px;
+    color: var(--tamno-plava);
+    background-color: var(--crvena);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.all-sections{
+    padding: 80px 0;
+}
+
+.brojevi{
+    background-image: url(Assets/Brojevi.png);
+}
+
+.section-headings{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 68px;
+    text-align: center;
+}
+
+.brojevi-naslov{
+    color:var(--bela);
+}
+
+.sekcija-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.brojevi-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rezultat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.broj-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.broj{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: var(--bela);
+}
+
+.jedinica{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 35px;
+    color: #444444;
+    margin-top: auto;
+}
+
+.naziv-brojke{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);   
+}
+
+.vezbe-naslov{
+    color: var(--tamno-plava);
+}
+
+.vezbe-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.vezba{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vezba-naziv{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    font-weight: 44px;
+    color: var(--tamno-plava);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cena{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.zakazivanje{
+    background-color: var(--tamno-plava);
+}
+
+.zakazivanje-naslov{
+    color: var(--crvena);
+}
+
+.popunite{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--bela);
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.Form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    max-width: 507px;
+    width: 100%;
+    gap: 15px;
+}
+
+.form-label{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--bela);
+}
+
+.input-field{
+    min-height: 40px;
+    background-color: rgba(218, 0, 23, 0.25);
+    border: none;
+    border-radius: 12px;
+    padding-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    width: 100%;
+}
+
+.Submit{
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    font-weight: 38px;
+    padding: 12px 54px;
+    background-color: var(--crvena);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+input.input-field[type=number]::-webkit-outer-spin-button,
+input.input-field[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.input-field[type=number] {
+    -moz-appearance: textfield;
+}
+
+.flatpickr-calendar{
+    background-color: var(--crvena) !important;
+    color: var(--tamno-plava) !important;
+}
+
+.flatpickr-calendar .flatpickr-day {
+    color: var(--tamno-plava) !important;
+}
+
+.flatpickr-calendar .flatpickr-day:hover{
+    background-color: var(--tamno-plava);
+    color: var(--crvena) !important;
+    border-color: var(--bela) !important;
+}
+
+.flatpickr-calendar .flatpickr-day.selected {
+    background-color: var(--tamno-plava) ;
+    color: var(--crvena) ;
+}
+
+.flatpickr-calendar .flatpickr-monthDropdown-months {
+    background-color: var(--crvena) ;
+    color: var(--tamno-plava) ; 
+}
+
+.flatpickr-calendar .flatpickr-day.today {
+    border-color: var(--bela) !important;
+}
+
+.flatpickr-calendar .flatpickr-day.today:hover {
+    border-color: var(--bela) !important;
+    background-color: var(--tamno-plava);
+    color: var(--crvena) !important;
+}
+
+.flatpickr-day.disabled{    
+    color: rgba(13, 15, 24, 0.3) !important;
+    pointer-events: none !important;
+    text-decoration: line-through !important;
+}
+
+.flatpickr-day.disabled:hover {
+    color:rgba(13, 15, 24, 0.3) !important;
+    cursor: not-allowed !important;
+}
+
+.error-message {
+    color: var(--crvena);
+    font-family: 'Roboot', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 5px;
+}
