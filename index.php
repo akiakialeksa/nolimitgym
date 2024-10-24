@@ -101,7 +101,7 @@
             <div class="container">
                 <h2 class="section-headings zakazivanje-naslov">Zakažite svoj termin</h2>
                 <p class="popunite">Popunite formu sa vašim podacima i zahtevima:</p>
-                <form class="Form" method="POST" action="Connection.php">
+                <form class="Form" id="gym-form" method="POST">
                     <div class="form-group">
                         <label for="Ime" class="form-label">Ime</label>
                         <input class="input-field" type="text" name="Ime" id="Ime" placeholder="Petar" autocomplete="off" required>
@@ -169,8 +169,12 @@
                     </div>
                     <button class="Submit" type="submit">Zakaži</button>
                 </form>
+                <div class="success-message" id="success-message" style="display: none;">
+                    <p>Uspešno ste zakazali termin za vežbu!</p>
+                </div>
             </div>
         </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
     </body>
-    <script src="script.js"></script>
 </html>
