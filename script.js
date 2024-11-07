@@ -1,33 +1,49 @@
 console.log('Script is working!');
 
-// Format datuma u kalendaru
 document.addEventListener("DOMContentLoaded", function() {
     flatpickr("#Dan", {
         dateFormat: "d/m/Y",
         firstDayOfWeek: 1,
-        minDate: "today"    
+        minDate: "today"
     });
 });
 
+function validateForm() {
+    let isValid = true;
 
-// Blokiranje prethodnih datuma
-document.querySelector('.Form').addEventListener('submit', function(e) {
-    const dateInput = document.getElementById('Dan');
-    const dateError = document.getElementById('date-error');
+    const fields = [
+        { id: 'Ime', error: 'ime-error' },
+        { id: 'Prezime', error: 'prezime-error' },
+        { id: 'broj-telefona', error: 'broj-error' },
+        { id: 'Tip', error: 'tip-error' },
+        { id: 'Dan', error: 'date-error' },
+        { id: 'Vreme', error: 'vreme-error' }
+    ];
 
-    if (!dateInput.value) {
-        e.preventDefault();
-        dateError.style.display = 'block';
-    } else {
-        dateError.style.display = 'none';
-    }
-});
+    fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        const error = document.getElementById(field.error);
 
+        if (!input.value) {
+            error.style.display = 'block';
+            isValid = false;
+        } else {
+            error.style.display = 'none';
+        }
+    });
 
-// Uspešno zakazivanje
+    return isValid;
+}
+
 $(document).ready(function(){
     $('#gym-form').on('submit', function(e){
         e.preventDefault();
+
+        if (!validateForm()) {
+            console.log('Form validation failed.');
+            return;
+        }
+        
         console.log('Form submission prevented!');
 
         $.ajax({
@@ -40,6 +56,8 @@ $(document).ready(function(){
                     var jsonResponse = JSON.parse(response);
                     if (jsonResponse.status === 'success') {
                         $('#gym-form').hide();
+                        $('#popunite').hide();
+                        $('#zakazivanje-naslov').hide();
                         $('#success-message').show().text(jsonResponse.message); 
                     } else {
                         alert('Došlo je do greške: ' + jsonResponse.message);

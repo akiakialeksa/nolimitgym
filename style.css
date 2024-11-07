@@ -38,7 +38,8 @@
     font-weight: Medium;
     font-size: 14px;
     line-height: 20px;
-    color: var(--crvena);
+    color: var(--bela);
+    font-weight: bold;
     padding-left: 5px;
     padding-right: 5px;
     margin-left: 10px;
@@ -158,6 +159,10 @@
     color: rgba(255, 255, 255, 0.5);   
 }
 
+.vezbe {
+    background-color: var(--crvena);
+}
+
 .vezbe-naslov{
     color: var(--tamno-plava);
 }
@@ -235,19 +240,24 @@
     color: var(--bela);
 }
 
-.input-field{
-    min-height: 40px;
+.input-field, 
+select.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
     background-color: rgba(218, 0, 23, 0.25);
     border: none;
     border-radius: 12px;
-    padding-left: 25px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: white;
-    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
+
 
 .Submit{
     font-family:'Roboto', sans-serif;
@@ -325,3 +335,25 @@ input.input-field[type=number] {
     margin-top: 5px;
 }
 
+.success-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #6ECE42;
+}
+
+.Footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14;
+    color: var(--crvena);
+    font-weight: 500;
+    padding: 40px 0;
+    background-color: var(--tamno-plava);
+    border-top: 1px solid var(--crvena);
+    text-align: center;
+    text-transform: uppercase;
+}

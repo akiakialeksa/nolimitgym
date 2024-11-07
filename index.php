@@ -16,18 +16,18 @@
                 <div class="nav-wrapper">
                     <a href="index.html"><img src="Assets/Logo.png" alt="Logo"></a>
                     <div class="nav-menu">
-                        <a href="index.html" class="nav-link">Početna</a>
-                        <a href="index.html" class="nav-link">Rezultati</a>
-                        <a href="index.html" class="nav-link">Rezervišite termin</a>
+                        <a href="#hero" class="nav-link">Početna</a>
+                        <a href="#rezultati" class="nav-link">Rezultati</a>
+                        <a href="#zakazivanje" class="nav-link">Rezervišite termin</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <section class="Hero">
+        <section class="Hero" id="hero">
             <h1 class="hero-naslov">ZVANIČNI<br>HAMMER STRENGTH<br>TRENING CENTAR</h1>
-            <button class="main-cta">Rezervišite svoj termin</button>
+            <a href="#zakazivanje"><button class="main-cta">Rezervišite svoj termin</button></a>
         </section>
-        <section class="all-sections brojevi">
+        <section class="all-sections brojevi" id="rezultati">
             <div class="container">
                 <div class="sekcija-wrapper">
                     <h2 class="section-headings brojevi-naslov">NoLimitGym u brojevima</h2>
@@ -75,8 +75,8 @@
         </section>
         <section class="all-sections vezbe">
             <div class="container">
-                <div class="sekcija-wrapper">
-                    <h2 class="section-headings vezbe-naslog">Vežbe kod nas</h2>
+                <div class="sekcija-wrapper" >
+                    <h2 class="section-headings vezbe-naslov">Vežbe kod nas</h2>
                     <div class="vezbe-wrapper">
                         <div class="vezba">
                             <img src="Assets/biceps.png" alt="Ruke">
@@ -97,74 +97,78 @@
                 </div>
             </div>
         </section>
-        <section class="all-sections zakazivanje">
+        <section class="all-sections zakazivanje" id="zakazivanje">
             <div class="container">
-                <h2 class="section-headings zakazivanje-naslov">Zakažite svoj termin</h2>
-                <p class="popunite">Popunite formu sa vašim podacima i zahtevima:</p>
+                <h2 class="section-headings zakazivanje-naslov" id="zakazivanje-naslov">Zakažite svoj termin</h2>
+                <p class="popunite" id="popunite">Popunite formu sa vašim podacima i zahtevima:</p>
                 <form class="Form" id="gym-form" method="POST">
                     <div class="form-group">
                         <label for="Ime" class="form-label">Ime</label>
-                        <input class="input-field" type="text" name="Ime" id="Ime" placeholder="Petar" autocomplete="off" required>
+                        <span id="ime-error" class="error-message" style="display: none;" >Molimo vas unesite vaše ime!</span>
+                        <input class="input-field" type="text" name="Ime" id="Ime" placeholder="Petar" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="Prezime" class="form-label">Prezime</label>
-                        <input class="input-field" type="text" name="Prezime" id="Prezime" placeholder="Petrović" autocomplete="off" required>
+                        <span id="prezime-error" class="error-message" style="display: none;" >Molimo vas unesite vaše prezime!</span>
+                        <input class="input-field" type="text" name="Prezime" id="Prezime" placeholder="Petrović" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="broj-telefona" class="form-label">Broj telefona</label>
-                        <input class="input-field" type="number" name="broj-telefona" id="broj-telefona" placeholder="012 345678" autocomplete="off" required>
+                        <span id="broj-error" class="error-message" style="display: none;" >Molimo vas unesite broj telefona!</span>
+                        <input class="input-field" type="number" name="broj-telefona" id="broj-telefona" placeholder="012 345678" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="Tip" class="form-label">Tip vežbe</label>
+                        <span id="tip-error" class="error-message" style="display: none;" >Molimo vas izaberite tip vežbe!</span>
                         <div class="dropdown">
-                            <select class="input-field dropdown-menu" id="Tip" name="Tip" autocomplete="off" required>
-                                <option value="" disabled selected>Izaberite tip vežbe</option>
-                                <option class="vezba-select" value="Ruke">Ruke</option>
-                                <option class="vezba-select" value="Noge">Noge</option>
-                                <option class="vezba-select" value="Kardio">Kardio</option>
+                            <select class="input-field dropdown-menu" id="Tip" name="Tip" autocomplete="off" style = "width:583px">
+                                <option value="" disabled selected style="background-color:rgb(67,12,28)">Izaberite tip vežbe</option>
+                                <option class="vezba-select" value="Ruke" style="background-color:rgb(67,12,28)">Ruke</option>
+                                <option class="vezba-select" value="Noge" style="background-color:rgb(67,12,28)">Noge</option>
+                                <option class="vezba-select" value="Kardio" style="background-color:rgb(67,12,28)">Kardio</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="Dan" class="form-label">Dan</label>
                         <span id="date-error" class="error-message" style="display: none;" >Molimo vas izaberite datum!</span>
-                        <input class="input-field" type="date" name="Dan" id="Dan" placeholder="dd/mm/yyyy  " autocomplete="off" required>
+                        <input class="input-field" type="date" name="Dan" id="Dan" placeholder="dd/mm/yyyy  " autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="Vreme" class="form-label">Vreme</label>
-                        <select class="input-field" id="Vreme" name="Vreme" required>
-                            <option value="" disabled selected>Izaberi vreme</option>
-                            <option value="07:00">07:00</option>
-                            <option value="07:30">07:30</option>
-                            <option value="08:00">08:00</option>
-                            <option value="08:30">08:30</option>
-                            <option value="09:00">09:00</option>
-                            <option value="09:30">09:30</option>
-                            <option value="10:00">10:00</option>
-                            <option value="10:30">10:30</option>
-                            <option value="11:00">11:00</option>
-                            <option value="11:30">11:30</option>
-                            <option value="12:00">12:00</option>
-                            <option value="12:30">12:30</option>
-                            <option value="13:00">13:00</option>
-                            <option value="13:30">13:30</option>
-                            <option value="14:00">14:00</option>
-                            <option value="14:30">14:30</option>
-                            <option value="15:00">15:00</option>
-                            <option value="15:30">15:30</option>
-                            <option value="16:00">16:00</option>
-                            <option value="16:30">16:30</option>
-                            <option value="17:00">17:00</option>
-                            <option value="17:30">17:30</option>
-                            <option value="18:00">18:00</option>
-                            <option value="18:30">18:30</option>
-                            <option value="19:00">19:00</option>
-                            <option value="19:30">19:30</option>
-                            <option value="20:00">20:00</option>
-                            <option value="20:30">20:30</option>
-                            <option value="21:00">21:00</option>
-                            <option value="21:30">21:30</option>
-                            <option value="22:00">22:00</option>
+                        <span id="vreme-error" class="error-message" style="display: none;" >Molimo vas izaberite vreme!</span>
+                        <select class="input-field" id="Vreme" name="Vreme" style = "width:583px">
+                            <option value="" disabled selected style="background-color:rgb(67,12,28)">Izaberi vreme</option>
+                            <option style="background-color:rgb(67,12,28)" value="07:00">07:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="07:30">07:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="08:00">08:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="08:30">08:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="09:00">09:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="09:30">09:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="10:00">10:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="10:30">10:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="11:00">11:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="11:30">11:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="12:00">12:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="12:30">12:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="13:00">13:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="13:30">13:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="14:00">14:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="14:30">14:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="15:00">15:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="15:30">15:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="16:00">16:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="16:30">16:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="17:00">17:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="17:30">17:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="18:00">18:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="18:30">18:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="19:00">19:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="19:30">19:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="20:00">20:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="20:30">20:30</option>
+                            <option style="background-color:rgb(67,12,28)" value="21:00">21:00</option>
+                            <option style="background-color:rgb(67,12,28)" value="21:30">21:30</option>
                         </select>
                     </div>
                     <button class="Submit" type="submit">Zakaži</button>
@@ -172,6 +176,11 @@
                 <div class="success-message" id="success-message" style="display: none;">
                     <p>Uspešno ste zakazali termin za vežbu!</p>
                 </div>
+            </div>
+        </section>
+        <section class="Footer">
+            <div class="container">
+                <p>Copyright © 2024 NoLimitGYM</p>
             </div>
         </section>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
